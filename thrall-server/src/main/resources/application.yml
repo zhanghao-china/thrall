@@ -1,0 +1,26 @@
+spring:
+  redis:
+    host: 223.68.154.38
+    port: 6379
+    password: Zhang094264
+    timeout: 5000
+    database: 3
+  application:
+    name: thrall-exception-center
+  resources:
+    static-locations: classpath:/dist/
+  data:
+    redis:
+      repositories:
+        enabled: false
+    mongodb:
+      host: 172.19.25.6
+      port: 27017
+      database: thrall
+      username: thrall
+      password: thrall
+server:
+  port: 9880
+logging:
+  level:
+    web: debug

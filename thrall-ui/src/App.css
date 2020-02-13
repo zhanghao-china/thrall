@@ -1,0 +1,20 @@
+.ant-layout-sider-children .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 32px;
+}
+
+html,
+body,
+#root,
+.container {
+  height: 100%;
+}
+
+.select-width {
+  width: 120px;
+}

@@ -1,0 +1,12 @@
+/kstore-platform-app-site/data
+# Created by .ignore support plugin (hsz.mobi)
+*~
+*.iml
+target
+.idea
+logs
+data/elasticsearch
+/git.sh
+rebel.xml
+data
+*.rebel.xml.bak
