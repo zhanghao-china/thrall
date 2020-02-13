@@ -15,12 +15,12 @@
         <dependency>
             <artifactId>thrall-core</artifactId>
             <groupId>com.kbq.cloud</groupId>
-            <version>1.0.1-RELEASE</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <artifactId>thrall-common</artifactId>
             <groupId>com.kbq.cloud</groupId>
-            <version>1.0.1-RELEASE</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
