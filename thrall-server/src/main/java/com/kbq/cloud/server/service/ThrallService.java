@@ -245,7 +245,7 @@ public class ThrallService extends BaseService<ThrallDto> {
                             Object.class);
                     return BaseResponse.success(responseEntity.getBody());
                 default:
-                   return null;
+                   return BaseResponse.errorful();
             }
         });
     }
