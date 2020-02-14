@@ -46,22 +46,24 @@ import java.util.Map;
 @Slf4j
 public class ThrallService extends BaseService<ThrallDto> {
 
-    @Autowired
-    ThrallDao thrallDao;
+    private final ThrallDao thrallDao;
+
+    private final MicroServiceDao microServiceDao;
+
+    private final HostDao hostDao;
+
+    private final ReactiveMongoTemplate reactiveMongoTemplate;
+
+    private final RestTemplate restTemplate;
 
     @Autowired
-    MicroServiceDao microServiceDao;
-
-    @Autowired
-    HostDao hostDao;
-
-    @Autowired
-    ReactiveMongoTemplate reactiveMongoTemplate;
-
-    @Autowired
-    RestTemplate restTemplate;
-
-
+    public ThrallService(ThrallDao thrallDao, MicroServiceDao microServiceDao, HostDao hostDao, ReactiveMongoTemplate reactiveMongoTemplate, RestTemplate restTemplate) {
+        this.thrallDao = thrallDao;
+        this.microServiceDao = microServiceDao;
+        this.hostDao = hostDao;
+        this.reactiveMongoTemplate = reactiveMongoTemplate;
+        this.restTemplate = restTemplate;
+    }
 
 
     public Mono<BaseResponse> addThrall(ThrallVo thrallVo){

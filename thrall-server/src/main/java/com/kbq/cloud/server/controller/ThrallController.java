@@ -17,8 +17,12 @@ import reactor.core.publisher.Mono;
 @RestController
 public class ThrallController {
 
+    private final ThrallService thrallService;
+
     @Autowired
-    ThrallService thrallService;
+    public ThrallController(ThrallService thrallService) {
+        this.thrallService = thrallService;
+    }
 
     @PostMapping(Constant.REQUEST_THRALL_URL)
     public Mono<BaseResponse> addThrall(@RequestBody ThrallAddRequest thrallAddRequest) {

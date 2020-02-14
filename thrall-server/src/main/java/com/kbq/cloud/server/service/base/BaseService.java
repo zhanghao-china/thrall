@@ -29,7 +29,7 @@ public abstract class BaseService<T> {
      * @param value
      * @return
      */
-    public Mono<Boolean> addToRedis(String key, T value, Duration timeout) {
+    protected Mono<Boolean> addToRedis(String key, T value, Duration timeout) {
         return Objects.isNull(timeout) ? redisTemplate.opsForValue().set(key, value)
                 : redisTemplate.opsForValue().set(key, value, timeout);
     }
@@ -40,7 +40,7 @@ public abstract class BaseService<T> {
      * @param value
      * @return
      */
-    public Mono<Long> addListToRedis(String key, List<T> value) {
+    protected Mono<Long> addListToRedis(String key, List<T> value) {
         return redisTemplate.opsForList().leftPushAll(key, value);
     }
 
@@ -63,7 +63,7 @@ public abstract class BaseService<T> {
      * @return
      * @throws Exception
      */
-    public Mono<T> getFromRedis(String key) {
+    protected Mono<T> getFromRedis(String key) {
         return redisTemplate.opsForValue().get(key);
     }
 
@@ -73,7 +73,7 @@ public abstract class BaseService<T> {
      * @return
      * @throws Exception
      */
-    public Flux<T> getListFromRedis(String key) {
+    protected Flux<T> getListFromRedis(String key) {
         return redisTemplate.opsForList().range(key, 0, -1);
     }
 
@@ -93,7 +93,7 @@ public abstract class BaseService<T> {
      * @param key
      * @throws Exception
      */
-    public Mono<Long> remove(String key){
+    protected Mono<Long> remove(String key){
         return redisTemplate.delete(key);
     }
     /**
@@ -101,7 +101,7 @@ public abstract class BaseService<T> {
      * @param pattern
      * @return
      */
-    public Flux<String> getKeys(String pattern) {
+    protected Flux<String> getKeys(String pattern) {
         return redisTemplate.scan(ScanOptions.scanOptions().count(Long.MAX_VALUE).match("*".concat(pattern)).build());
     }
 
