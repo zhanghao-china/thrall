@@ -11,3 +11,4 @@ data/elasticsearch
 rebel.xml
 data
 *.rebel.xml.bak
+dist
