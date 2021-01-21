@@ -24,7 +24,7 @@
         <spring.version>5.2.3.RELEASE</spring.version>
         <aspectj.version>1.9.5</aspectj.version>
         <reactor-netty.version>0.8.11.RELEASE</reactor-netty.version>
-        <jackson-databind.version>2.9.10.1</jackson-databind.version>
+        <jackson-databind.version>2.9.10.7</jackson-databind.version>
         <fastjson.version>1.2.60</fastjson.version>
         <spring-cloud-commons.version>2.2.0.RELEASE</spring-cloud-commons.version>
         <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
