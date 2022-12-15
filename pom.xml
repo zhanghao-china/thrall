@@ -21,7 +21,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <lombok.version>1.18.10</lombok.version>
-        <spring.version>5.2.3.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <aspectj.version>1.9.5</aspectj.version>
         <reactor-netty.version>0.8.11.RELEASE</reactor-netty.version>
         <jackson-databind.version>2.9.10.1</jackson-databind.version>
